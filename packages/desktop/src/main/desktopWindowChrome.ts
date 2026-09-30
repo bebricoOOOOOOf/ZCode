@@ -140,7 +140,9 @@ function buildDesktopWindowVisualOptions() {
       titleBarStyle: "hidden" as const,
       trafficLightPosition: MACOS_TRAFFIC_LIGHT_BASE_POSITION,
       vibrancy: "under-window" as const,
-      visualEffectState: "active" as const,
+      // follow（平台默认）：失焦窗口的材质随失焦态渲染；"active" 会让后台窗口
+      // 持续以激活态全速合成 vibrancy，空闲时也占用大量 GPU。
+      visualEffectState: "follow" as const,
     };
   }
 

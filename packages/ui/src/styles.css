@@ -880,6 +880,12 @@ body {
     .cua-group-gradient-text {
       animation: none;
     }
+
+    .animated-gradient-text {
+      animation: none;
+      color: var(--animated-gradient-text-strong);
+      -webkit-text-fill-color: var(--animated-gradient-text-strong);
+    }
   }
 
   @keyframes gradient-flow {
